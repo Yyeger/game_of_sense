@@ -2,6 +2,12 @@
 
 > Conway's Game of Life, but cells are **concepts** and the transition rule is a **local LLM**.
 
+<p align="center">
+  <img src="screenshot1.png" alt="Early generation" width="32%" />
+  <img src="screenshot2.png" alt="Mid-run emergence" width="32%" />
+  <img src="screenshot3.png" alt="Stable attractors" width="32%" />
+</p>
+
 An empty cell surrounded by `water`, `dirt`, and `sun` might become `plant`.
 A `plant` engulfed by `fire` becomes `ash`. `stone` next to `metal` and
 `air` crystallises into `crystal`. The board evolves into a slow, emergent
