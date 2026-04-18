@@ -13,9 +13,6 @@ A `plant` engulfed by `fire` becomes `ash`. `stone` next to `metal` and
 `air` crystallises into `crystal`. The board evolves into a slow, emergent
 map of how ideas collide.
 
-Sibling project: [Game of Lore](../life_ai) — same universe, but the LLM
-narrates clashing tribes instead of defining physics.
-
 ---
 
 ## What it does
@@ -127,31 +124,6 @@ Edges wrap. No boundary effects.
 
 ---
 
-## Project layout
-
-```
-lib/life_semantic/
-  application.ex   -- OTP supervisor
-  ollama.ex        -- HTTP client (think:false, keep_alive:10m, <think> stripper)
-  cache.ex         -- ETS memoization
-  grid.ex          -- state, transition, spawning
-  cli.ex           -- terminal renderer + tick loop
-```
-
----
-
-## Tuning knobs
-
-| Where | What | Default |
-|---|---|---|
-| `grid.ex` `@spawn_per_tick` | fresh seeds per tick | `4` |
-| `grid.ex` `@seed` | pool of basic concepts | 22 elementals |
-| `grid.ex` `max_concurrency:` | parallel LLM calls per tick | `6` |
-| `ollama.ex` `@model` | Ollama model tag | `"qwen3.5:2b"` |
-| `ollama.ex` `temperature` | answer diversity | `0.8` |
-| `application.ex` `size:` | grid edge length | `20` |
-
----
 
 ## Known behaviors
 
